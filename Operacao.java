@@ -30,6 +30,20 @@ public class Operacao {
 		return dividendo/divisor;
 	}
 	
+	public double calcularMediaPonderada(double p1, double p2) {
+		double media = (this.num1 * p1 + this.num2 * p2) / (p1 + p2);
+		return media;
+	}
+	
+	public void calcularFatorial(int num) {
+		int res = 1;
+		for (int i = num; i > 0; i--) {
+			res *= i;
+		}
+		
+		this.resultado = res;
+  }
+
 	public void subtrair() {
 		resultado = num1-num2;
 	}
