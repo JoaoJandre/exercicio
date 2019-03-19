@@ -7,23 +7,29 @@ public class Main {
 		double res;
 		
 		Scanner input = new Scanner(System.in);
-		System.out.println("Insira o primeiro número inteiro");
+		System.out.println("Insira o primeiro nÃºmero inteiro");
 		n1 = input.nextInt();
-		System.out.println("Insira o segundo número inteiro");
+		System.out.println("Insira o segundo nÃºmero inteiro");
 		n2 = input.nextInt();
 		
 		Operacao operacao = new Operacao(n1, n2);
 
 		operacao.soma();
-		System.out.println("O resultado da soma é: "+ operacao.getResultado());
+		System.out.println("O resultado da soma Ã©: "+ operacao.getResultado());
 		
 		operacao.calcularMedia(n1, n2);
-		System.out.println("A média dos números é: "+ operacao.getResultado());
+		System.out.println("A mÃ©dia dos nÃºmeros Ã©: "+ operacao.getResultado());
 		
 		res = operacao.multiplicar();
-		System.out.println("O resultado da multiplicação dos números é: "+ res);
+		System.out.println("O resultado da multiplicaÃ§Ã£o dos nÃºmeros Ã©: "+ res);
 
 		res = operacao.dividir(n1, n2);
-		System.out.println("O resultado da divisão dos números é: "+ res);	
+		System.out.println("O resultado da divisÃ£o dos nÃºmeros Ã©: "+ res);	
+		
+		operacao.subtrair();
+		System.out.println("O resultado da subtraÃ§Ã£o Ã©: "+ operacao.getResultado());
+		
+		res = operacao.calcularPotencia();
+		System.out.println("O resultado da potencia Ã©: "+ res);
 	}
 }
