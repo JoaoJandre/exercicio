@@ -37,5 +37,11 @@ public class Main {
 
 		res = operacao.dividir(n1, n2);
 		System.out.println("O resultado da divisão dos números é: "+ res);	
+
+		operacao.subtrair();
+		System.out.println("O resultado da subtração é: "+ operacao.getResultado());
+		
+		res = operacao.calcularPotencia();
+		System.out.println("O resultado da potencia é: "+ res);
 	}
 }
