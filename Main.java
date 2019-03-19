@@ -7,23 +7,35 @@ public class Main {
 		double res;
 		
 		Scanner input = new Scanner(System.in);
-		System.out.println("Insira o primeiro n˙mero inteiro");
+		System.out.println("Insira o primeiro n√∫mero inteiro");
 		n1 = input.nextInt();
-		System.out.println("Insira o segundo n˙mero inteiro");
+		System.out.println("Insira o segundo n√∫mero inteiro");
 		n2 = input.nextInt();
 		
 		Operacao operacao = new Operacao(n1, n2);
 
 		operacao.soma();
-		System.out.println("O resultado da soma È: "+ operacao.getResultado());
+		System.out.println("O resultado da soma √©: "+ operacao.getResultado());
 		
 		operacao.calcularMedia(n1, n2);
-		System.out.println("A mÈdia dos n˙meros È: "+ operacao.getResultado());
+		System.out.println("A m√©dia dos n√∫meros √©: "+ operacao.getResultado());
+		
+		System.out.println("Insira o primeiro peso da m√©dia ponderada: ");
+		int p1 = input.nextInt();
+		System.out.println("Insira o segundo peso da m√©dia ponderada: ");
+		int p2 = input.nextInt();
+		
+		res = operacao.calcularMediaPonderada(p1, p2);
+		System.out.println("A m√©dia Ponderada dos n√∫meros √©: "+ res);
 		
 		res = operacao.multiplicar();
-		System.out.println("O resultado da multiplicaÁ„o dos n˙meros È: "+ res);
+		System.out.println("O resultado da multiplica√ß√£o dos n√∫meros √©: "+ res);
+		
+		System.out.println("Insira o n√∫mero para o c√°lculo de fatorial: ");
+		operacao.calcularFatorial(input.nextInt());
+		System.out.println("O resultado da fatorial √©: " + operacao.getResultado());
 
 		res = operacao.dividir(n1, n2);
-		System.out.println("O resultado da divis„o dos n˙meros È: "+ res);	
+		System.out.println("O resultado da divis√£o dos n√∫meros √©: "+ res);	
 	}
 }
