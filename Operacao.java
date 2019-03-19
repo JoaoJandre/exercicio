@@ -30,6 +30,18 @@ public class Operacao {
 		return dividendo/divisor;
 	}
 	
+	public void subtrair() {
+		resultado = num1-num2;
+	}
+	
+	public int calcularPotencia() {
+		int num3 = 1;
+		for(int i = 0; i < num2; i++) {
+			num3 = num3*num1;
+		}
+		return num3;
+	}
+	
 	public int getNum1() {
 		return num1;
 	}
